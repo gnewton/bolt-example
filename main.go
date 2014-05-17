@@ -18,7 +18,7 @@ const BUCKET = "widgets"
 
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
-	db, err := bolt.Open("./test.bolt.db2", 0666)
+	db, err := bolt.Open("./test.bolt.db", 0666)
 	defer db.Close()
 	if err != nil{
 		fmt.Println(err)
